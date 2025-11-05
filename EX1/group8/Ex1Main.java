@@ -1,7 +1,6 @@
-package EX1; // <--- שינוי 1: שונה מ-group8 ל-EX1
+package EX1.group8; // <--- שינוי 1: שונה מ-group8 ל-EX1
 import java.util.Scanner;
 
-// <--- שינוי 2: שונה מ-group8 ל-Ex1Main (כדי להתאים לשם הקובץ)
 public class Ex1Main {
 	public static void main(String[] args) {
         

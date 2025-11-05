@@ -1,4 +1,4 @@
-package EX1; // <--- השינוי היחיד: הוספת הצהרת החבילה
+package EX1.group8; 
 
 import java.math.BigInteger;
 
