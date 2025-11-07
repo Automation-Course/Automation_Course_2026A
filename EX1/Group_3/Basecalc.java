@@ -1,8 +1,11 @@
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Basecalc {
-    public static void main(String[] args) {
+    static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
 
@@ -15,14 +18,14 @@ public class Basecalc {
 
             int choice;
 
-            // בדיקת קלט תפריט  
+            // בדיקת קלט תפריט
             try {
-            	choice = scanner.nextInt();   // קלט ישיר כ-int
+                choice = scanner.nextInt();   // קלט ישיר כ-int
                 scanner.nextLine();            // לצרוך את ה-newline שנשאר אחרי nextInt()
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter 1, 2 or 3.");
                 System.out.println();
-                scanner.nextLine();            
+                scanner.nextLine();
                 continue;
             }
             if (choice != 1 && choice != 2 && choice != 3) {
@@ -32,7 +35,7 @@ public class Basecalc {
             }
 
             if (choice == 1) {
-              //בינארי לעשרוני
+                //בינארי לעשרוני
                 boolean valid = false;
                 while (!valid) {
                     System.out.print("Enter a binary number (for example: 101101): ");
@@ -77,7 +80,7 @@ public class Basecalc {
                     } catch (InputMismatchException e) {
                         System.out.println("Invalid input. Please enter a valid integer number.");
                         System.out.println();
-                        scanner.nextLine();            
+                        scanner.nextLine();
                         continue;
                     }
 
@@ -131,7 +134,7 @@ public class Basecalc {
 
     // המרה לפי שיטת המשלים ל-2 (לשליליים בלבד)
     public static String decimalToTwosComplementManual(int num, int bits) {
-        int positive = -num; // הופכים את המספר לשלילי לחיובי 
+        int positive = -num; // הופכים את המספר לשלילי לחיובי
         String binary = decimalToBinaryManual(positive); // ממירים את הערך החיובי לבינארי רגיל
 
         // השלמה באפסים לשמאל עד לגודל הביטים
@@ -151,7 +154,7 @@ public class Basecalc {
                 inverted[i] = '1'; // נהפוך אותו ל-1
                 break; // נעצור כי הוספת 1 הסתיימה
             } else {
-                inverted[i] = '0'; // אם הביט הוא 1 – נהפוך ל-0 ונמשיך שמאלה 
+                inverted[i] = '0'; // אם הביט הוא 1 – נהפוך ל-0 ונמשיך שמאלה
             }
         }
 
@@ -161,6 +164,6 @@ public class Basecalc {
             result += inverted[i]; // נוסיף כל ביט למחרוזת
         }
 
-        return result;
-    }
+        return result;
+   }
 }
