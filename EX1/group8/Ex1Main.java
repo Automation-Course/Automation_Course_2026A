@@ -1,15 +1,13 @@
-package EX1.group8; // <--- שינוי 1: שונה מ-group8 ל-EX1
+package EX1.group8; 
 import java.util.Scanner;
 
 public class Ex1Main {
 	public static void main(String[] args) {
         
-        // השורה הבאה תציג שגיאה עד שנעדכן את הקובץ השני
         BaseConvertor convertor = new BaseConvertor(); 
         
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            // השארנו את העברית - Eclipse אמור להציג אותה כראוי
             System.out.println("מחשבון המרות: בינארי <-> עשרוני");
             System.out.println("אנא בחר את הפעולה הרצויה:");
             System.out.println("1. המרה מבינארי לעשרוני");
