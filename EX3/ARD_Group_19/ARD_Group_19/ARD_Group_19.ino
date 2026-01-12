@@ -51,7 +51,7 @@ void loop() {
   }
 
   if (actionTriggered) {
-    if (lightValue > 200) { 
+    if (lightValue >200) { 
       for (int i = 0; i < dayCount; i++) {
         digitalWrite(ledPin, HIGH); delay(300);                 
         digitalWrite(ledPin, LOW);  delay(300);                 

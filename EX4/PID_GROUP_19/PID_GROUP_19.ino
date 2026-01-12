@@ -48,8 +48,10 @@ void loop() {
       Serial.print(" Ki: "); Serial.print(i);
       Serial.print(" Kd: "); Serial.println(d);
     }
-    while(Serial.available()) Serial.read(); // ניקוי ה-buffer
   }
+   if(Serial.available()) {
+    Serial.read(); // ניקוי ה-buffer
+   }
 
   // מדידת זווית (440 פולסים לסיבוב) 
   long pulses = myEnc.read();
